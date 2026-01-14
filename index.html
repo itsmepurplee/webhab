@@ -152,12 +152,70 @@
     max-width: 700px;
     color: rgba(255, 255, 255, 0.85);
   }
+    .hero {
+  position: relative;
+  z-index: 1;
+}
+
 </style>
+/* NAV BAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.nav-right a {
+  margin-left: 28px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.nav-right a:hover {
+  color: #ffffff;
+}
 
   </style>
 </head>
 
 <body>
+  <nav class="navbar">
+  <div class="nav-inner">
+
+    <div class="nav-left">
+      Yulia Vorontsova
+    </div>
+
+    <div class="nav-right">
+      <a href="#about">About</a>
+      <a href="#focus">Professional Focus</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </div>
+</nav>
+
   <header class="hero">
   <div class="hero-overlay"></div>
 
