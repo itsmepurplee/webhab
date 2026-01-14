@@ -207,12 +207,10 @@
 
 .intro-image img {
   width: 100%;
-  max-width: 460px;
-  aspect-ratio: 3 / 4;
+  max-width: 420px; /* keep as-is */
   height: auto;
+  border-radius: 10px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.14);
 }
 
 /* Frame */
@@ -271,9 +269,29 @@
     grid-template-columns: 1fr;
   }
 
+  .intro-card {
+    padding: 40px 24px;
+  }
+
   .intro-image {
     margin-top: 32px;
   }
+}
+
+/* Black background section */
+.intro-dark {
+  width: 100%;
+  background: radial-gradient(circle at center, #141414 0%, #0b0b0b 60%);
+  padding: 140px 24px;
+}
+/* White card */
+.intro-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 64px;
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.45);
 }
 
 </style>
@@ -317,6 +335,7 @@
 
     <!-- Intro -->
   <section class="intro intro-dark">
+     <div class="intro-card">
   <div class="intro-grid">
 
     <div class="intro-text">
