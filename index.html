@@ -181,12 +181,9 @@
     grid-template-columns: 1fr;
   }
 
-  .intro-image {
-    margin-top: 32px;
-  }
-}
-
-   /* INTRO GRID */
+/* =========================
+   INTRO GRID
+========================= */
 .intro-grid {
   display: grid;
   grid-template-columns: 1.2fr 1.1fr;
@@ -194,59 +191,57 @@
   align-items: center;
 }
 
-
-/* TEXT */
+/* =========================
+   TEXT
+========================= */
 .intro-text h1 {
   margin-top: 0;
 }
 
-/* IMAGE CONTAINER */
+/* =========================
+   IMAGE
+========================= */
 .intro-image {
   position: relative;
 }
 
 .intro-image img {
   width: 100%;
-  max-width: 420px;
+  max-width: 460px;
+  aspect-ratio: 3 / 4;
   height: auto;
-  border-radius: 8px;
   object-fit: cover;
+  border-radius: 8px;
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.14);
 }
-.intro-image img {
-  aspect-ratio: 3 / 4;
-}
-.intro-dark .intro-image img {
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-}
 
-.intro-dark .intro-image::after {
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-/* Optional subtle frame effect */
+/* Frame */
 .intro-image::after {
   content: "";
   position: absolute;
   inset: -8px;
   border: 1px solid var(--border-light);
-  z-index: -1;
   border-radius: 8px;
-}
-/* DARK INTRO SECTION */
-.intro-dark {
-  background: #0f0f0f;
-  color: #ffffff;
-  padding: 120px 0;
-  margin-top: -120px; /* pulls section closer to hero */
+  z-index: -1;
 }
 
-/* keep content centered */
-.intro-dark .intro-grid {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 24px;
+/* =========================
+   DARK INTRO SECTION
+========================= */
+.intro-dark {
+  width: 100%;
+  background: linear-gradient(180deg, #0b0b0b 0%, #121212 100%);
+  padding: 140px 0;
 }
+
+/* Center content */
+.intro-dark .intro-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Text colors */
 .intro-dark h1 {
   color: #ffffff;
 }
@@ -257,6 +252,28 @@
 
 .intro-dark .meta {
   color: rgba(255, 255, 255, 0.6);
+}
+
+/* Image adjustments for dark background */
+.intro-dark .intro-image img {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.intro-dark .intro-image::after {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image {
+    margin-top: 32px;
+  }
 }
 
 </style>
@@ -296,7 +313,7 @@
 </header>
 
 
-  <main class="container">
+  <main>
 
     <!-- Intro -->
   <section class="intro intro-dark">
