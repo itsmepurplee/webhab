@@ -189,10 +189,11 @@
    /* INTRO GRID */
 .intro-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.2fr 1.1fr;
+  gap: 64px;
   align-items: center;
 }
+
 
 /* TEXT */
 .intro-text h1 {
@@ -206,17 +207,19 @@
 
 .intro-image img {
   width: 100%;
+  max-width: 420px;
   height: auto;
-  border-radius: 6px;
+  border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.14);
 }
+
 
 /* Optional subtle frame effect */
 .intro-image::after {
   content: "";
   position: absolute;
-  inset: -12px;
+  inset: -8px;
   border: 1px solid var(--border-light);
   z-index: -1;
   border-radius: 8px;
