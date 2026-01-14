@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <title>Yulia Stepanovna Vorontsova</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -97,10 +99,78 @@
       font-size: 13px;
       color: #999;
     }
+    <style>
+  body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("hero.jpg"); /* CHANGE THIS */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .hero-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 700px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+</style>
+
   </style>
 </head>
 
 <body>
+  <header class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Strategist, Investor, and Global Executive</h1>
+    <p>
+      I work at the intersection of international trade, logistics strategy,
+      and cross-border business systems, focusing on scalable growth
+      and long-term value creation.
+    </p>
+  </div>
+</header>
+
   <main class="container">
 
     <!-- Intro -->
