@@ -216,7 +216,13 @@
 .intro-image img {
   aspect-ratio: 3 / 4;
 }
+.intro-dark .intro-image img {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
 
+.intro-dark .intro-image::after {
+  border-color: rgba(255, 255, 255, 0.08);
+}
 
 /* Optional subtle frame effect */
 .intro-image::after {
@@ -226,6 +232,31 @@
   border: 1px solid var(--border-light);
   z-index: -1;
   border-radius: 8px;
+}
+/* DARK INTRO SECTION */
+.intro-dark {
+  background: #0f0f0f;
+  color: #ffffff;
+  padding: 120px 0;
+  margin-top: -120px; /* pulls section closer to hero */
+}
+
+/* keep content centered */
+.intro-dark .intro-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.intro-dark h1 {
+  color: #ffffff;
+}
+
+.intro-dark p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.intro-dark .meta {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 </style>
@@ -268,7 +299,7 @@
   <main class="container">
 
     <!-- Intro -->
-  <section class="intro">
+  <section class="intro intro-dark">
   <div class="intro-grid">
 
     <div class="intro-text">
