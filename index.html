@@ -176,6 +176,52 @@
       margin-left: 16px;
     }
   }
+   @media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image {
+    margin-top: 32px;
+  }
+}
+
+   /* INTRO GRID */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* TEXT */
+.intro-text h1 {
+  margin-top: 0;
+}
+
+/* IMAGE CONTAINER */
+.intro-image {
+  position: relative;
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Optional subtle frame effect */
+.intro-image::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border: 1px solid var(--border-light);
+  z-index: -1;
+  border-radius: 8px;
+}
+
 </style>
 
 </head>
@@ -216,7 +262,10 @@
   <main class="container">
 
     <!-- Intro -->
-    <section class="intro">
+  <section class="intro">
+  <div class="intro-grid">
+
+    <div class="intro-text">
       <h1>Yulia Stepanovna Vorontsova</h1>
       <p>
         A woman of intelligence, elegance, and resilience — blending strategy,
@@ -226,7 +275,14 @@
       <div class="meta">
         Born March 10, 1987 · Russian ancestry · Based in Los Angeles, California
       </div>
-    </section>
+    </div>
+
+    <div class="intro-image">
+      <img src="images/huang.jpg" alt="Yulia Vorontsova portrait">
+    </div>
+
+  </div>
+</section>
 
     <div class="divider"></div>
 
