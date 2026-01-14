@@ -292,6 +292,50 @@
 .intro-card .meta {
   color: #777777;
 }
+/* =========================
+   PROFESSIONAL PROFILE
+========================= */
+
+.profile-section {
+  background: #ffffff;
+  padding: 120px 24px;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Image */
+.profile-image img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+/* Text */
+.profile-text h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.profile-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+}
 
 </style>
 
@@ -361,8 +405,17 @@
     <div class="divider"></div>
 
     <!-- About -->
-    <section id="about" class="section">
-  <h2>Professional Profile</h2>
+    <section id="about" class="profile-section">
+  <div class="profile-container">
+
+    <!-- LEFT: IMAGE -->
+    <div class="profile-image">
+      <img src="meeting.jpg" alt="">
+    </div>
+
+    <!-- RIGHT: YOUR TEXT -->
+    <div class="profile-text">
+      <h2>Professional Profile</h2>
 
       <p>
         I am a Russian-born entrepreneur and executive currently based in the
@@ -370,11 +423,16 @@
         logistics, and financial strategy, I have spent my life navigating
         cross-cultural environments and complex business landscapes.
       </p>
+
       <p>
         My journey reflects a balance of rational decision-making and emotional
         depth — shaped by education, travel, and personal reinvention.
       </p>
-    </section>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Education -->
     <section id="education" class="section">
