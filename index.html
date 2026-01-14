@@ -70,49 +70,49 @@
   }
 
   /* HERO */
- .hero {
+.hero {
   position: relative;
   height: 100vh;
-  background-image: url("images/New1.png"); /* updated to your image */
+  background-image: url("images/New1.png");
   background-size: cover;
   background-position: center;
 }
 
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
 
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-  }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
 
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-  }
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
 
-  .hero-content h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 46px;
-    font-weight: 400;
-    line-height: 1.25;
-    margin-bottom: 18px;
-  }
-
-  .hero-content p {
-    font-size: 16px;
-    max-width: 720px;
-    color: rgba(255, 255, 255, 0.85);
-  }
+.hero-content p {
+  font-size: 16px;
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.85);
+}
 
   /* MAIN CONTENT */
   main {
@@ -200,19 +200,18 @@
   </div>
 </nav>
 
-  <header class="hero">
-  <img src="images/New1.png" alt="Hero Header Image" class="hero-image">
-
+ <header class="hero">
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-   <h1>Strategist, Investor, and Global Executive</h1>
-<p>
-  Working at the intersection of international trade, logistics strategy,
-  and cross-border business systems, with a focus on sustainable growth
-  and long-term value creation.
-</p>
-
+    <h1>Strategist, Investor, and Global Executive</h1>
+    <p>
+      Working at the intersection of international trade, logistics strategy,
+      and cross-border business systems, with a focus on sustainable growth
+      and long-term value creation.
+    </p>
   </div>
 </header>
+
 
   <main class="container">
 
